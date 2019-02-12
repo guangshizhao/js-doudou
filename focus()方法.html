@@ -1,0 +1,26 @@
+主要是用于获取焦点，自动把光标放到此组件上面，无须用户再次操作。 
+示例：
+<html>
+<head>
+<p>1. 长度限制</p>
+<form name=a onsubmit="return test()"> 
+<textarea name="b" cols="40" rows="6" placeholder="不能超过50个字符！"></textarea>
+<br /> 
+<input type="submit" name="Submit" value="check"> 
+</form>
+
+<script language="javascript"> 
+function test() 
+{ 
+if(document.a.b.value.length>50) 
+{ 
+alert("不能超过50个字符！"); 
+document.a.b.focus(); 
+return false; 
+}
+} 
+</script>
+</body>
+
+</html>
+输入超过50字符长度的内容，会弹出一个提示对话框。当你点击确定之后，光标会自动回到输入框位置。这就是focus()的作用。
